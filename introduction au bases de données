@@ -1,0 +1,70 @@
+Voici une présentation en cinq diapositives pour comparer MongoDB et SQL (en prenant MySQL comme exemple de SGBDR) :
+
+---
+
+### Diapositive 1: Présentation de MongoDB
+#### MongoDB
+- **Type de Base de Données** : NoSQL (non relationnelle)
+- **Structure des Données** : Documents JSON (BSON en interne)
+- **Fonctionnalités Clés** :
+  - **Schéma flexible** : Les collections peuvent contenir des documents avec différents champs.
+  - **Échelle horizontale** : Facilité de distribution et de partitionnement des données sur plusieurs serveurs.
+  - **Richesse des requêtes** : Support des requêtes ad hoc, indexation, agrégations, et recherche texte.
+  - **Performance** : Optimisé pour les charges de travail avec des lectures et écritures fréquentes.
+  - **Replica Sets** : Haute disponibilité et tolérance aux pannes via la réplication.
+
+---
+
+### Diapositive 2: Présentation de MySQL
+#### MySQL
+- **Type de Base de Données** : Relationnelle (SGBDR)
+- **Structure des Données** : Tables avec lignes et colonnes
+- **Fonctionnalités Clés** :
+  - **Modèle de données structuré** : Schéma défini avec relations entre les tables.
+  - **ACID Compliance** : Garantit les transactions atomiques, cohérentes, isolées, et durables.
+  - **SQL Standard** : Utilisation du langage SQL pour la définition, la manipulation, et le contrôle des données.
+  - **Indexation avancée** : Supporte divers types d'index pour améliorer les performances des requêtes.
+  - **Transactions** : Support complet des transactions avec rollback et commit.
+
+---
+
+### Diapositive 3: Comparaison de la Structure et du Modèle de Données
+#### Structure et Modèle de Données
+- **MongoDB** :
+  - Schéma flexible, adapté aux données non structurées ou semi-structurées.
+  - Documents peuvent varier en structure au sein de la même collection.
+  - Adapté aux données hiérarchiques et imbriquées.
+  
+- **MySQL** :
+  - Schéma rigide, adapté aux données structurées.
+  - Relations définies entre les tables (clé primaire, clé étrangère).
+  - Normalisation des données pour éviter la redondance et garantir l'intégrité des données.
+
+---
+
+### Diapositive 4: Comparaison des Performances et de l'Évolutivité
+#### Performances et Évolutivité
+- **MongoDB** :
+  - Échelle horizontale via le sharding (partitionnement des données).
+  - Performant pour les lectures et écritures fréquentes.
+  - Ajustable dynamiquement en fonction de la charge de travail.
+
+- **MySQL** :
+  - Échelle verticale, généralement via le dimensionnement du matériel.
+  - Performance optimisée pour les transactions complexes et les jointures.
+  - Réplication pour la haute disponibilité, mais sharding manuel plus complexe.
+
+---
+
+### Diapositive 5: Cas d'Utilisation et Choix de l'Architecture
+#### Cas d'Utilisation et Choix
+- **MongoDB** :
+  - Applications nécessitant une grande flexibilité de schéma (ex. : gestion de contenu, IoT).
+  - Applications distribuées nécessitant une scalabilité horizontale.
+  - Scénarios où la structure des données évolue fréquemment.
+
+- **MySQL** :
+  - Applications nécessitant des transactions complexes et des relations rigides (ex. : systèmes financiers, ERP).
+  - Scénarios où l'intégrité et la cohérence des données sont critiques.
+  - Applications ayant un schéma de données stable et bien défini.
+
